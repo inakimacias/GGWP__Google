@@ -16,13 +16,12 @@
 	        <pathelement location="${bin.dir}"/>
 	        <pathelement location="${resources.dir}"/>
 	    </path>
-	
+		
 	<target name="Test" description="Runs a local test of the Server">
         <java classname="dao.Test" classpathref="classpath" fork="true">
         	<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
 		</java>
     </target>
-	
 	
 	<target name="RUN GOOGLE SERVER" description="Runs the Google Server">
 		<java classname="remote.TCPSocketServer" classpathref="classpath" fork="true">
